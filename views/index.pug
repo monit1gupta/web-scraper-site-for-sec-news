@@ -2,4 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  for data in data_list 
+    h3
+      a(href=data.link) #{data.title}
+      span    #{data.date}
+
